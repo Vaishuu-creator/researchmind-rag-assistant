@@ -24,9 +24,28 @@ An AI-powered research assistant that can read research papers and answer questi
 
 PDF → Chunking → Embeddings → Vector Database → Retriever → LLM → Answer
 
-## Installation
+```mermaid
+flowchart TD
 
-```bash
-git clone https://github.com/Vaishuu-creator/researchmind-rag-assistant
-cd researchmind-rag-assistant
-pip install -r requirements.txt
+A[User - Streamlit UI] --> B[Question Input]
+
+B --> C[Retriever]
+C --> D[FAISS Vector Database]
+
+subgraph Document Ingestion Pipeline
+E[PDF]
+E --> F[Text Extraction]
+F --> G[Text Chunking]
+G --> H[OpenAI Embeddings]
+H --> D
+end
+
+D --> I[Relevant Paper Chunks]
+
+I --> J[LLM - GPT-4o-mini]
+
+J --> K[Answer Generation]
+
+K --> L[Answer + Citations]
+```
+
