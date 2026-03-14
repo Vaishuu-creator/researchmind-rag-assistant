@@ -49,3 +49,35 @@ J --> K[Answer Generation]
 K --> L[Answer + Citations]
 ```
 
+## Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Vaishuu-creator/researchmind-rag-assistant.git
+cd researchmind-rag-assistant
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Create .env file
+```ini
+OPENAI_API_KEY=your_api_key_here
+```
+
+Run the application
+```bash
+streamlit run app.py
+```
+
+## Example Questions
+
+- What classifiers were used in these papers?
+- Compare the PCOS prediction methods.
+- What dataset was used in the research?
+- What is the conclusion of the paper?
+
