@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+venv/
+
+# Data files
+data/papers/
+data/*.pdf
+data/papers/*.pdf
+
+# Vector database
+vectorstore/
+vectorstore/faiss_index
+
+# OS files
+.DS_Store
+Thumbs.db
